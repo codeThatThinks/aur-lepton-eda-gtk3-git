@@ -1,20 +1,21 @@
 pkgbase = lepton-eda-gtk3-git
-	pkgdesc = a suite of free software tools for designing electronics (gtk3) (devel)
-	pkgver = 1.9.13.20201211.r150.b71d05c36
+	pkgdesc = A suite of free software tools for designing electronics. (gtk3 version)
+	pkgver = 1.9.18.20220529.r2028.316720dcd
 	pkgrel = 1
 	url = https://github.com/lepton-eda/lepton-eda
 	arch = x86_64
-	license = GPL2
+	license = GPL-2.0-or-later OR LGPL-2.1-or-later
 	makedepends = git
+	makedepends = pkg-config
+	makedepends = flex
+	makedepends = gawk
 	depends = gtk3
 	depends = guile
-	depends = libstroke
+	optdepends = libstroke: mouse gesture support
+	optdepends = gtksheet: required for lepton-attrib (currently broken)
 	provides = lepton-eda
 	conflicts = lepton-eda
-	conflicts = geda
-	conflicts = geda-gaf
-	source = lepton-eda::git+https://github.com/lepton-eda/lepton-eda.git
-	sha1sums = SKIP
+	source = git+https://github.com/lepton-eda/lepton-eda.git
+	md5sums = SKIP
 
 pkgname = lepton-eda-gtk3-git
-
